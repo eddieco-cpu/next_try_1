@@ -1,7 +1,9 @@
-const Stories = async () => {
+//
+const Stories = () => {
+  //
   return (
     <div className="stories_page">
-      <p>Stories home</p>
+      <h1>Stories Home</h1>
     </div>
   );
 };

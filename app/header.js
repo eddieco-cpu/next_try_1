@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 
 function Header() {
@@ -11,6 +10,9 @@ function Header() {
       </nav>
       <nav>
         <Link href="/stories">Stories</Link>
+      </nav>
+      <nav>
+        <Link href="/todos">Todos</Link>
       </nav>
     </header>
   );

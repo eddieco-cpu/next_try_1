@@ -1,0 +1,159 @@
+/* @import "reset.css"; */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 20px;
+}
+
+*:not(header, main, footer, body, html) {
+  padding: 5px;
+  margin: 5px;
+}
+
+header {
+  min-height: 80px;
+}
+
+main {
+  box-sizing: border-box;
+  // border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  min-height: calc(100vh - 130px);
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  &>* {
+    flex-grow: 1;
+  }
+}
+
+.breadcrumbs {
+  margin: 10px 0 -5px;
+  border-top: 1px solid #ccc;
+  // border-bottom: 1px solid #ccc;
+}
+
+footer {
+  min-height: 150px;
+  padding: 20px;
+  text-align: center;
+}
+
+.loading {
+  background-color: darkslateblue;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  min-height: 100px;
+  min-width: 100px;
+  flex-shrink: 0;
+
+  position: relative;
+
+  &>* {
+    font-size: 3vh;
+    color: #fff;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    margin: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.stories {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  &>.loading {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+  }
+
+  &_menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+  }
+
+  &_main {
+    flex-grow: 3.5;
+    flex-shrink: 0;
+    flex-basis: 0;
+    display: flex;
+
+    &>* {
+      flex-grow: 1;
+    }
+  }
+}
+
+.todos {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  &>.loading {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+  }
+
+  &_menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+  }
+
+  &_main {
+    flex-grow: 3.5;
+    flex-shrink: 0;
+    flex-basis: 0;
+    display: flex;
+
+    &>* {
+      flex-grow: 1;
+    }
+  }
+}
+
+
+fieldset {
+  background-color: rgba(100, 100, 200, 0.075);
+}
