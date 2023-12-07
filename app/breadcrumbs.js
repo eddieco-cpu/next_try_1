@@ -9,6 +9,7 @@ function Breadcrumbs() {
   const pathname = usePathname();
 
   console.log(pathname);
+  console.log(process.env.TEST_TEXT || "no env");
 
   return (
     <div className="breadcrumbs">
