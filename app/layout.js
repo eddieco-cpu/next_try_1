@@ -6,6 +6,7 @@ import Footer from "./footer";
 import Breadcrumbs from "./breadcrumbs";
 
 const inter = Inter({ subsets: ["latin"] });
+const envVr = process.env.TEST_TEXT || "no env";
 
 export const metadata = {
   viewport: "width=device-width, initial-scale=1",
@@ -22,7 +23,7 @@ export default function RootLayout(props) {
       <body className={inter.className}>
         <Header />
         {/* {bread} */}
-        <Breadcrumbs />
+        <Breadcrumbs envVr={envVr} />
         <main>{props.children}</main>
         <Footer />
       </body>
